@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap Icon Cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- Bootstrap CSS Cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <title>ELETUTECH | E.M.S Employees</title>
+
+    <style>
+      .brand-gradient {
+        background: #1986cf;
+        background: -webkit-linear-gradient(to top, #1986cf, #4bcf23);
+        background: linear-gradient(to top, #1986cf, #4bcf23);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <!-- Nav Starts -->
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark shadow small mb-3">
+      <div class="container-fluid">
+        <a href="./index.html" class="navbar-brand">
+          <span class="brand-gradient">ELETUTECH | E.M.S</span>
+        </a>
+
+        <button
+          type="button"
+          class="navbar-toggler border-0"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-content"
+          aria-controls="navbar-content"
+          aria-expanded="false"
+          aria-label="Toggle Navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-content">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="dash.html" class="nav-link active" aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="./employees_list.html" class="nav-link">Employees</a>
+            </li>
+            <li class="nav-item">
+              <a href="./jobs_list.html" class="nav-link">Jobs</a>
+            </li>
+          </ul>
+
+          <form class="d-flex flex-row" role="search">
+            <div class="hstack gap-3 me-3">
+              <input
+                type="search"
+                class="form-control form-control-sm me-auto"
+                placeholder="Search ..."
+                aria-label="Search .."
+              />
+              <button type="submit" class="btn btn-sm btn-success">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+            <div class="vr"></div>
+            <a href="index.html" class="btn btn-sm btn-warning ms-3">
+              <i class="bi bi-power"></i>
+            </a>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav Ends -->
+
+    <!-- Employees Data Starts -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-2">
+          <div class="list-group shadow-sm small mb-3">
+            <div class="list-group-item active">Jobs Data</div>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              data-bs-toggle="modal"
+              data-bs-target="#add_job"
+              >Add Job</a
+            >
+            <a
+              href="./jobs_list.html"
+              class="list-group-item list-group-item-action"
+              >View Jobs</a
+            >
+          </div>
+
+          <div class="list-group shadow-sm small mb-3">
+            <div class="list-group-item active">Related Links</div>
+            <a
+              href="./employees_list.html"
+              class="list-group-item list-group-item-action"
+              >Employees List</a
+            >
+          </div>
+        </div>
+
+        <div class="col-md-10">
+          <div class="card shadow-sm border-0 mb-3">
+            <div class="card-header bg-dark text-white text-center">
+              Jobs List
+            </div>
+            <table
+              class="table table-sm small table-bordered align-middle mb-0"
+            >
+              <tr class="table-secondary">
+                <th>ID</th>
+                <th>Job Name</th>
+                <th>Details</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>Graphic Designer</td>
+                <td>
+                  <div class="d-grid">
+                    <a
+                      href="#"
+                      class="btn btn-sm btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#job_detail"
+                      >Details</a
+                    >
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid">
+                    <a
+                      href="#"
+                      class="btn btn-sm btn-warning"
+                      data-bs-toggle="modal"
+                      data-bs-target="#job_edit"
+                      >Edit</a
+                    >
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid">
+                    <a
+                      href="#"
+                      class="btn btn-sm btn-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#job_delete"
+                      >Delete</a
+                    >
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Web Developer</td>
+                <td>
+                  <div class="d-grid">
+                    <a
+                      href="#"
+                      class="btn btn-sm btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#job_detail"
+                      >Details</a
+                    >
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid">
+                    <a
+                      href="#"
+                      class="btn btn-sm btn-warning"
+                      data-bs-toggle="modal"
+                      data-bs-target="#job_edit"
+                      >Edit</a
+                    >
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid">
+                    <a
+                      href="#"
+                      class="btn btn-sm btn-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#job_delete"
+                      >Delete</a
+                    >
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Web Designer</td>
+                <td>
+                  <div class="d-grid">
+                    <a
+                      href="#"
+                      class="btn btn-sm btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#job_detail"
+                      >Details</a
+                    >
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid">
+                    <a
+                      href="#"
+                      class="btn btn-sm btn-warning"
+                      data-bs-toggle="modal"
+                      data-bs-target="#job_edit"
+                      >Edit</a
+                    >
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid">
+                    <a
+                      href="#"
+                      class="btn btn-sm btn-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#job_delete"
+                      >Delete</a
+                    >
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Employees Data Ends -->
+
+    <!-- Add Jobs Modal Starts -->
+    <div
+      class="modal fade"
+      id="add_job"
+      data-bs-backdrop="static"
+      tabindex="-1"
+      aria-hidden="true"
+      style="backdrop-filter: blur(5px)"
+    >
+      <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h5 class="modal-title">Add Job Details</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <form>
+              <div class="container">
+                <div class="row gx-3">
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <input
+                        type="date"
+                        class="form-control form-control-sm"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        placeholder="Job Name"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-10">
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-sm btn-success">
+                        Add Job
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2">
+                    <div class="d-grid">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-warning"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Jobs Modal Ends -->
+
+    <!-- Job Details Modal Starts -->
+    <div
+      class="modal fade"
+      id="job_detail"
+      data-bs-backdrop="static"
+      tabindex="-1"
+      aria-hidden="true"
+      style="backdrop-filter: blur(5px)"
+    >
+      <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h5 class="modal-title">Job Details</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+
+          <div class="modal-body p-0">
+            <table class="table table-bordered small mb-0">
+              <tr>
+                <th class="w-50">ID</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>Date</th>
+                <td>25th July 2022</td>
+              </tr>
+              <tr>
+                <th>Job Name</th>
+                <td>Web Developer</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="modal-footer">
+            <a
+              href="#"
+              class="btn btn-sm btn-warning"
+              data-bs-toggle="modal"
+              data-bs-target="#job_edit"
+              >Edit Details</a
+            >
+            <a
+              href="#"
+              class="btn btn-sm btn-primary"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              >Close</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Job Details Modal Ends -->
+
+    <!-- Edit Job Modal Starts -->
+    <div
+      class="modal fade"
+      id="job_edit"
+      data-bs-backdrop="static"
+      tabindex="-1"
+      aria-hidden="true"
+      style="backdrop-filter: blur(5px)"
+    >
+      <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h5 class="modal-title">Edit Job Details</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <form>
+              <div class="container">
+                <div class="row gx-3">
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <input
+                        type="date"
+                        class="form-control form-control-sm"
+                        value="2022-07-25"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        placeholder="Job Name"
+                        value="Web Developer"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-10">
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-sm btn-warning">
+                        Update Job
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2">
+                    <div class="d-grid">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-danger"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Edit Job Modal Ends -->
+
+    <!-- Delete Job Modal Starts -->
+    <div
+      class="modal fade"
+      id="job_delete"
+      data-bs-backdrop="static"
+      tabindex="-1"
+      aria-hidden="true"
+      style="backdrop-filter: blur(5px)"
+    >
+      <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+          <div
+            class="modal-body text-center d-flex justify-content-between align-items-center"
+          >
+            <h4 class="fw-light m-0">
+              Do you really want to delete job
+              <strong><q>Web Developer</q></strong> ?
+              <button
+                type="button"
+                class="btn-close ms-auto"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </h4>
+          </div>
+
+          <div class="modal-footer d-flex justify-content-center">
+            <button
+              type="submit"
+              class="btn btn-sm btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#employee_edit"
+            >
+              Yes
+            </button>
+            <button
+              type="button"
+              class="btn btn-sm btn-warning"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              No, Go back
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Delete Job Modal Ends -->
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+<!-- https://cdn.pixabay.com/photo/2023/03/11/10/42/plants-7844173_960_720.jpg -->
